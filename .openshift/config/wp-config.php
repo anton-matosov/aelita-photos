@@ -115,6 +115,15 @@ require_once(getenv('OPENSHIFT_REPO_DIR') . '.openshift/openshift.inc');
 
 /*
 |--------------------------------------------------------------------------
+| Wordpress URL site autoswitching.
+|--------------------------------------------------------------------------
+*/
+
+define('WP_HOME', 'http://' . getenv('OPENSHIFT_APP_DNS')  );
+define('WP_SITEURL', 'http://' . getenv('OPENSHIFT_APP_DNS'));
+
+/*
+|--------------------------------------------------------------------------
 | That's all, stop editing! Happy blogging.
 |--------------------------------------------------------------------------
 */
